@@ -37,4 +37,3 @@ Cám ơn bạn đã quan tâm đến bài viết Giới thiệu về loạt bài
 1. Đọc các bài viết của TechMaster trên facebook: https://www.facebook.com/techmastervn
 2. Xem các video của TechMaster qua Youtube: https://www.youtube.com/@TechMasterVietnam
 3. Chat với techmaster qua Discord: https://discord.gg/yQjRTFXb7a
-4. 
