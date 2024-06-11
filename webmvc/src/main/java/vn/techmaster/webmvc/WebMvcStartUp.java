@@ -8,7 +8,7 @@ import java.io.File;
 public class WebMvcStartUp {
 
     public static void main(String[] args) throws Exception {
-        String webappDirLocation = "src/main/webapp/";
+        String webappDirLocation = "src/main/resources/";
         Tomcat tomcat = new Tomcat();
         Connector connector = new Connector();
         connector.setPort(8080);
