@@ -13,12 +13,14 @@
         <module>singleton-prototype</module>
         <module>singleton</module>
         <module>aop</module>
+        <module>webmvc</module>
     </modules>
 
     <properties>
         <aspectj.version>1.9.22.1</aspectj.version>
         <lombok.version>1.18.32</lombok.version>
         <spring.version>6.1.8</spring.version>
+        <tomcat.version>11.0.0-M20</tomcat.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
