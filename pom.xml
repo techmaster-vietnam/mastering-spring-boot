@@ -12,9 +12,11 @@
         <module>hello-world</module>
         <module>singleton-prototype</module>
         <module>singleton</module>
+        <module>aop</module>
     </modules>
 
     <properties>
+        <aspectj.version>1.9.22.1</aspectj.version>
         <lombok.version>1.18.32</lombok.version>
         <spring.version>6.1.8</spring.version>
         <maven.compiler.source>17</maven.compiler.source>
