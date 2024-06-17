@@ -15,15 +15,18 @@
         <module>aop</module>
         <module>webmvc</module>
         <module>jdbc</module>
+        <module>simple-website</module>
+        <module>logging</module>
     </modules>
 
     <properties>
         <aspectj.version>1.9.22.1</aspectj.version>
         <dbcp2.version>2.12.0</dbcp2.version>
+        <logback.version>1.5.6</logback.version>
         <lombok.version>1.18.32</lombok.version>
+        <mysql.version>8.4.0</mysql.version>
         <spring.version>6.1.8</spring.version>
         <tomcat.version>11.0.0-M20</tomcat.version>
-        <mysql.version>8.4.0</mysql.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
