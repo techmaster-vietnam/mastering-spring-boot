@@ -18,15 +18,20 @@
         <module>simple-website</module>
         <module>logging</module>
         <module>webflux</module>
+        <module>websocket</module>
+        <module>r2dbc</module>
     </modules>
 
     <properties>
         <aspectj.version>1.9.22.1</aspectj.version>
         <dbcp2.version>2.12.0</dbcp2.version>
+        <jackson.version>2.17.1</jackson.version>
+        <jakarta.websocket.version>2.2.0</jakarta.websocket.version>
         <logback.version>1.5.6</logback.version>
         <lombok.version>1.18.32</lombok.version>
         <mysql.version>8.4.0</mysql.version>
         <reactor.version>1.1.20</reactor.version>
+        <r2dbc.version>1.1.3</r2dbc.version>
         <spring.version>6.1.8</spring.version>
         <tomcat.version>11.0.0-M20</tomcat.version>
         <maven.compiler.source>17</maven.compiler.source>
