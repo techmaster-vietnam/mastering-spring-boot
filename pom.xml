@@ -20,6 +20,7 @@
         <module>webflux</module>
         <module>websocket</module>
         <module>r2dbc</module>
+        <module>messaging</module>
     </modules>
 
     <properties>

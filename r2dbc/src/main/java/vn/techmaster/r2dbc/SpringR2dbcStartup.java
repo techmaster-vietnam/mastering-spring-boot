@@ -39,5 +39,6 @@ public class SpringR2dbcStartup {
             .findByUsername("tvd12")
             .doOnNext(System.out::println)
             .subscribe();
+        Thread.sleep(3000);
     }
 }
