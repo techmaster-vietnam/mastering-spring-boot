@@ -21,6 +21,7 @@
         <module>websocket</module>
         <module>r2dbc</module>
         <module>messaging</module>
+        <module>spring-boot-hello-world</module>
     </modules>
 
     <properties>
