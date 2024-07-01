@@ -22,6 +22,7 @@
         <module>r2dbc</module>
         <module>messaging</module>
         <module>spring-boot-hello-world</module>
+        <module>spring-boot-web</module>
     </modules>
 
     <properties>
