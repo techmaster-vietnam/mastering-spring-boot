@@ -4,6 +4,31 @@
     <title>Greeting</title>
 </head>
 <body>
-<h1 th:text="${message}"></h1>
+<header>
+    <div th:replace="~{fragments/header :: content}"></div>
+</header>
+<h1>[[${message}]]</h1>
+<h1 th:text="#{message_1}"></h1>
+<h1 th:text="#{message_2}"></h1>
+<h1>[[#{message_1}]]</h1>
+<h1>[[#{message_2}]]</h1>
+<h1>Loop array</h1>
+<ul>
+    <li th:each="item, iterator : ${list}">
+        [[${item}]] [[${iterator.index}]]
+    </li>
+</ul>
+<ul>
+    <li th:each="i: ${#numbers.sequence(1, 5)}">
+        [[${i}]]
+    </li>
+</ul>
+<ul>
+    <li th:each="i: ${#numbers.sequence(1, 5)}"
+        th:if="${i % 2 == 0}">
+        [[${i}]]
+    </li>
+</ul>
+<script th:replace="~{fragments/header :: scripts}"></script>
 </body>
 </html>

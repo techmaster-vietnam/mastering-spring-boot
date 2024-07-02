@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import vn.techmaster.thymeleaf.service.GreetingService;
 
+import java.util.Arrays;
+
 @Controller
 @AllArgsConstructor
 public class HomeController {
@@ -20,6 +22,10 @@ public class HomeController {
     ) {
         String greetingMessage = greetingService.greet(name);
         model.addAttribute("message", greetingMessage);
+        model.addAttribute(
+            "list",
+            Arrays.asList("Tech", "Master")
+        );
         return "home";
     }
 }

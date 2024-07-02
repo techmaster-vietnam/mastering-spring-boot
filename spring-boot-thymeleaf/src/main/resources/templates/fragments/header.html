@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="content">
+<nav>
+  <ul>
+    <li>[[#{home}]]</li>
+    <li>[[#{posts}]]</li>
+  </ul>
+</nav>
+</div>
+<script th:fragment="scripts" th:inline="javascript">
+/*<![CDATA[*/
+var value = /*[[${value}]]*/ '';
+var message = /*[[#{message}]]*/ '';
+/*]]>*/
+
+console.log("Here's header");
+</script>
+</body>
+</html>
