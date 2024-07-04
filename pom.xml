@@ -24,6 +24,7 @@
         <module>spring-boot-hello-world</module>
         <module>spring-boot-web</module>
         <module>spring-boot-thymeleaf</module>
+        <module>spring-boot-redis</module>
     </modules>
 
     <properties>
