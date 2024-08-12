@@ -28,6 +28,7 @@
         <module>spring-boot-kafka</module>
         <module>spring-boot-rabbitmq</module>
         <module>spring-boot-activemq</module>
+        <module>spring-boot-hazelcast</module>
     </modules>
 
     <properties>
@@ -35,6 +36,7 @@
         <dbcp2.version>2.12.0</dbcp2.version>
         <jackson.version>2.17.1</jackson.version>
         <jakarta.websocket.version>2.2.0</jakarta.websocket.version>
+        <hazelcast.version>5.5.0</hazelcast.version>
         <logback.version>1.5.6</logback.version>
         <lombok.version>1.18.32</lombok.version>
         <mysql.version>8.4.0</mysql.version>
