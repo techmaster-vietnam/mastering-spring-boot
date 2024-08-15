@@ -29,6 +29,7 @@
         <module>spring-boot-rabbitmq</module>
         <module>spring-boot-activemq</module>
         <module>spring-boot-hazelcast</module>
+        <module>spring-boot-jpa</module>
     </modules>
 
     <properties>
