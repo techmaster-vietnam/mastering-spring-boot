@@ -9,9 +9,4 @@ import java.util.Collection;
 import java.util.List;
 
 @Repository
-public interface PersonRepository extends JpaRepository<Person, Long> {
-
-    Person findFirstByName(String name);
-
-    List<Person> findByNameIn(Collection<String> names);
-}
+public interface PersonRepository extends JpaRepository<Person, Long> {}
