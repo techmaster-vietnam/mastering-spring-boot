@@ -30,6 +30,7 @@
         <module>spring-boot-activemq</module>
         <module>spring-boot-hazelcast</module>
         <module>spring-boot-jpa</module>
+        <module>spring-boot-jpa-multi-datasources</module>
     </modules>
 
     <properties>
