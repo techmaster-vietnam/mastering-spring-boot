@@ -1,0 +1,13 @@
+spring:
+  mail:
+    host: smtp.ethereal.email
+    port: 587
+    username: maddison53@ethereal.email
+    password: jn7jnAPss4f63QBp6D
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: false
+            required: true
