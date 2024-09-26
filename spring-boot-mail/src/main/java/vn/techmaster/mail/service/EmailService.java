@@ -21,17 +21,17 @@ public class EmailService {
 
     private void start() {
         Thread newThread = new Thread(() -> {
-           while (true) {
-               try {
-                   SimpleMailMessage mail = queue.take();
-                   mailSender.send(mail);
-                   System.out.println("sent mail: " + mail);
-               } catch (InterruptedException e) {
-                   break;
-               } catch (Throwable e) {
-                   System.out.println("send mail error: " + e);
-               }
-           }
+            while (true) {
+                try {
+                    SimpleMailMessage mail = queue.take();
+                    mailSender.send(mail);
+                    System.out.println("sent mail: " + mail);
+                } catch (InterruptedException e) {
+                    break;
+                } catch (Throwable e) {
+                    System.out.println("send mail error: " + e);
+                }
+            }
         });
         newThread.setName("mail-sender");
         newThread.start();

@@ -32,6 +32,7 @@
         <module>spring-boot-jpa</module>
         <module>spring-boot-jpa-multi-datasources</module>
         <module>spring-boot-mail</module>
+        <module>spring-boot-login</module>
     </modules>
 
     <properties>
