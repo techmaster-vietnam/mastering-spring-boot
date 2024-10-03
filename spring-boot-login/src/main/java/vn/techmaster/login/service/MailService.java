@@ -8,6 +8,7 @@ public class MailService {
     public void sendActivationEmail(
         String toUserEmail,
         String toUserDisplayName,
+        String username,
         String activationToken
     ) {
     }

@@ -3,13 +3,12 @@ package vn.techmaster.login.controller;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 import vn.techmaster.login.converter.RequestToModelConverter;
+import vn.techmaster.login.request.LoginRequest;
 import vn.techmaster.login.request.RegisterRequest;
-import vn.techmaster.login.response.UserRegisterResponse;
+import vn.techmaster.login.response.UserLoginResponse;
 import vn.techmaster.login.service.UserAccessTokenService;
 import vn.techmaster.login.service.UserService;
 import vn.techmaster.login.validator.AuthenticationValidator;
@@ -28,13 +27,38 @@ public class AuthenticationController {
     private final AuthenticationValidator authenticationValidator;
 
     @PostMapping("/register")
-    public UserRegisterResponse registerPost(
-        HttpServletResponse response,
+    public ResponseEntity<?> registerPost(
         @RequestBody RegisterRequest request
     ) {
         authenticationValidator.validate(request);
-        long userId = userService.addUser(
+        userService.addUser(
             requestToModelConverter.toModelSaveUserModel(request)
+        );
+        return ResponseEntity.noContent().build();
+    }
+
+    @PostMapping("/users/{username}/validate-access-token")
+    public ResponseEntity<?> usersUsernameValidateAccessToken(
+        @PathVariable("username") String username,
+        @RequestParam(value = "activationToken") String activationToken
+    ) {
+        long userId = authenticationValidator
+            .validateUserActivationTokenAndGetId(
+                username,
+                activationToken
+            );
+        userService.activeUser(userId);
+        return ResponseEntity.noContent().build();
+    }
+
+    @PostMapping("/login")
+    public UserLoginResponse loginPost(
+        HttpServletResponse response,
+        @RequestBody LoginRequest request
+    ) {
+        long userId = authenticationValidator.validateUserCredential(
+            request.getUsername(),
+            request.getPassword()
         );
         String accessToken = userAccessTokenService.addUserAccessToken(
             userId
@@ -43,6 +67,6 @@ public class AuthenticationController {
         cookie.setHttpOnly(true);
         cookie.setMaxAge(ACCESS_TOKEN_EXPIRED_IN_HOUR * 60 * 60);
         response.addCookie(cookie);
-        return new UserRegisterResponse(accessToken);
+        return new UserLoginResponse(accessToken);
     }
 }
